@@ -50,6 +50,16 @@ Pilih: `Install Proxmox VE`
 
 `Accept license.`
 
+Nant Rekomendasi hostname untuk server kamu: 
+```
+homeserver
+````
+Dan untuk FQDN (`Full Hostname`) isi:
+
+```
+homeserver.local
+```
+
 ⚙️ 1.4. Pilih Disk untuk Instalasi
 
 PENTING:
