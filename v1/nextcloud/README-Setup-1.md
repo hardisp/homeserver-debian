@@ -8,16 +8,18 @@ Ini adalah nextcloud setup AWAL:
 Di dalam Debian VM (sebagai jiksdi):
 
 ```sh
+#sudo mkdir -p /mnt/cloud-mirror/nextcloud 
+
 mkdir -p /projects/nextcloud
-sudo mkdir -p /mnt/cloud-data/nextcloud
-sudo mkdir -p /mnt/cloud-mirror/nextcloud
+sudo mkdir -p /mnt/nextcloud-data/cloud-data
+sudo mkdir -p /mnt/nextcloud-backup/cloudbackup
 ```
 
 Beri permission ke Nextcloud (user www-data di dalam container):
 
 ```sh
-sudo chown -R www-data:www-data /mnt/cloud-data/nextcloud
-sudo chown -R root:root /mnt/cloud-mirror/nextcloud
+sudo chown -R www-data:www-data /mnt/nextcloud-data/cloud-data
+sudo chown -R root:root /mnt/nextcloud-backup/cloudbackup
 ```
 
 HDD mirror sengaja root-owned, nanti dipakai rsync backup saja, bukan ditulis langsung oleh Nextcloud.
